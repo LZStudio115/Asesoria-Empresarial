@@ -235,3 +235,32 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const floatingBtn = document.getElementById('scroll-top');
+  const contactSection = document.getElementById('contact');
+  const whatsappUrl = "https://wa.me/573022700376";
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // --- MODO WHATSAPP ---
+        floatingBtn.classList.add('whatsapp-active');
+        // Cambiamos el comportamiento del clic
+        floatingBtn.onclick = function(e) {
+          e.preventDefault();
+          window.open(whatsappUrl, '_blank');
+        };
+      } else {
+        // --- MODO SCROLL TOP ---
+        floatingBtn.classList.remove('whatsapp-active');
+        // Restauramos el comportamiento original de subir
+        floatingBtn.onclick = null; 
+      }
+    });
+  }, { threshold: 0.2 }); // Se activa cuando el 20% de la sección es visible
+
+  if (contactSection) {
+    observer.observe(contactSection);
+  }
+});

@@ -68,6 +68,40 @@
 }
 
 /*--------------------------------------------------------------
+# WhatsApp Scroll Top Button
+--------------------------------------------------------------*/
+/* Cuando el botón tiene la clase 'whatsapp-active' */
+.scroll-top.whatsapp-active {
+  background-color: #25d366 !important; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 50% !important; 
+  width: 50px !important;  /* Ajuste del tamaño */
+  height: 50px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  /* --------------------------------- */
+  
+  transition: all 0.3s ease; /* Transición suave de cuadrado/redondeado a círculo */
+}
+
+.scroll-top.whatsapp-active:hover {
+  background-color: #128c7e !important;
+}
+
+.scroll-top .whatsapp-icon {
+  transition: transform 0.3s ease;
+}
+
+.scroll-top.whatsapp-active .scroll-icon {
+  display: none !important; /* Esconde la flecha */
+}
+
+.scroll-top.whatsapp-active .whatsapp-icon {
+  display: block !important; /* Muestra el logo de WhatsApp */
+}
+
+/*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
@@ -1988,3 +2022,4 @@ section,
 .starter-section {
   /* Add your styles here
 }*/
+
