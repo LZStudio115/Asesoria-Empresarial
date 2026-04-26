@@ -2023,3 +2023,110 @@ section,
   /* Add your styles here
 }*/
 
+/*FORMULARIO DE CONTACTO*/
+/* Contenedores de mensajes (Ocultos por defecto) */
+.sent-message, 
+.error-message, 
+.loading {
+  display: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para el Mensaje de Éxito (Verde consultoría) */
+.sent-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para el Mensaje de Error (Rojo suave) */
+.error-message {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Estilo para el mensaje de "Cargando" */
+.loading {
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+}
+
+/* Estilos para el botón cuando se está enviando (Feedback visual) */
+button[data-fs-submit-btn]:disabled {
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Estilo para los errores específicos debajo de cada input */
+span[data-fs-error] {
+  font-size: 0.85rem;
+  color: #e74c3c;
+  margin-top: 5px;
+  display: block;
+  font-weight: 400;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sent-message, .error-message {
+  animation: fadeInDown 0.4s ease-out;
+}
+
+/* Estilo específico para el formulario del boletín */
+.newsletter-form {
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.newsletter-form input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: 100%;
+  outline: none;
+}
+
+.newsletter-form input[type="submit"] {
+  border: 0;
+  background: #007bff; /* Azul para el botón */
+  color: #fff;
+  font-size: 16px;
+  padding: 0 20px;
+  transition: 0.3s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-form input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Reutiliza los estilos de mensaje */
+#newsletter-success, #newsletter-error {
+  margin-top: 10px;
+  font-size: 14px;
+}
