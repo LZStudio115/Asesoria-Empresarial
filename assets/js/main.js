@@ -264,3 +264,6 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(contactSection);
   }
 });
+
+// FORMULARIO DE CONTACTO
+
