@@ -617,19 +617,14 @@
     
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contacto</h2>
         <p><span>¿Necesita Ayuda?</span> <span class="description-title">Contáctenos</span></p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
-
           <div class="col-lg-5">
-
             <div class="info-wrap">
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -638,7 +633,6 @@
                   <p>Vía Universidad Francisco de Paula Santander, Ocaña, Norte de Santander</p>
                 </div>
               </div><!-- End Info Item -->
-
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
@@ -655,50 +649,49 @@
                 </div>
               </div><!-- End Info Item -->
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26951.507453772476!2d-73.36030571256144!3d8.241042890639044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677a34fd9ca3a3%3A0xb0dc8c0d51bbb7c2!2sUniversidad%20Francisco%20de%20Paula%20Santander%20Oca%C3%B1a!5e1!3m2!1ses-419!2sco!4v1776289698565!5m2!1ses-419!2sco" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+              </div>
           </div>
 
           <div class="col-lg-7">
-            <form action="https://formspree.io/f/xqewnlwd" method="POST" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+            <div id="form-success" style="display:none;" class="sent-message">¡Su mensaje ha sido enviado con éxito!</div>
+            <div id="form-error" style="display:none;" class="error-message">Oops! Hubo un problema al enviar el formulario.</div>
 
+            <form id="my-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Nombre</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                  <input type="text" name="name" id="name-field" class="form-control" required data-fs-field>
+                  <span class="text-danger" data-fs-error="name"></span>
                 </div>
 
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Correo Electrónico</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                  <input type="email" class="form-control" name="email" id="email-field" required data-fs-field>
+                  <span class="text-danger" data-fs-error="email"></span>
                 </div>
 
                 <div class="col-md-12">
                   <label for="subject-field" class="pb-2">Asunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <input type="text" class="form-control" name="subject" id="subject-field" required data-fs-field>
+                  <span class="text-danger" data-fs-error="subject"></span>
                 </div>
 
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Mensaje</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required data-fs-field></textarea>
+                  <span class="text-danger" data-fs-error="message"></span>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Cargando...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Su mensaje ha sido enviado. ¡Gracias!</div>
-
-                  <button type="submit">Enviar Mensaje</button>
+                  <button type="submit" data-fs-submit-btn>Enviar Mensaje</button>
                 </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
+    
 
   </main>
 
@@ -710,11 +703,19 @@
           <div class="col-lg-6">
             <h4>Suscríbete a nuestro boletín informativo</h4>
             <p>¡Suscríbete a nuestro boletín y recibe las últimas noticias sobre nuestros productos y servicios!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Suscribirse"></div>
-              <div class="loading">Cargando...</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Su solicitud de suscripción ha sido enviada. ¡Gracias!</div>
+            
+            <div id="newsletter-success" style="display:none;" class="sent-message">Su solicitud de suscripción ha sido enviada. ¡Gracias!</div>
+            <div id="newsletter-error" style="display:none;" class="error-message">Hubo un error al procesar su suscripción.</div>
+
+            <form id="newsletter-form" class="php-email-form">
+              <input type="hidden" name="subject" value="Suscripción Boletín">
+              
+              <div class="newsletter-form">
+                <input type="email" name="email" required data-fs-field>
+                <input type="submit" value="Suscribirse" data-fs-submit-btn>
+              </div>
+              
+              <div class="loading" id="newsletter-loading" style="display:none;">Cargando...</div>
             </form>
           </div>
         </div>
@@ -738,23 +739,23 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Enlaces útiles</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Acerca de Nosotros</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Equipo de Trabajo</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Acerca de Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#team">Equipo de Trabajo</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuestros Servicios</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Administración</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Recursos Humanos</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Finanzas</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Producción</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Logística</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Gestión de Calidad</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Administración</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Recursos Humanos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Finanzas</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Producción</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Logística</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Gestión de Calidad</a></li>
           </ul>
         </div>
 
@@ -812,6 +813,68 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+  <script>
+    window.formspree = window.formspree || function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+
+    formspree("initForm", {
+      formElement: "#my-form",
+      formId: "xqewnlwd",
+      // Esta función se ejecuta cuando el envío es exitoso
+      onSuccess: function() {
+        const form = document.getElementById("my-form");
+        const successMsg = document.getElementById("form-success");
+        
+        // 1. Mostrar mensaje de éxito
+        successMsg.style.display = "block";
+        
+        // 2. Borrar los inputs
+        form.reset();
+        
+        // Opcional: Ocultar el mensaje después de 5 segundos
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
+      },
+      onError: function() {
+        document.getElementById("form-error").style.display = "block";
+      }
+    });
+  </script>
+  <script>
+    // Inicialización del formulario de suscripción
+    formspree("initForm", {
+      formElement: "#newsletter-form",
+      formId: "xqewnlwd", // El mismo ID que usas para el contacto
+      onSuccess: function() {
+        const form = document.getElementById("newsletter-form");
+        const successMsg = document.getElementById("newsletter-success");
+        const loadingMsg = document.getElementById("newsletter-loading");
+
+        loadingMsg.style.display = "none";
+        successMsg.style.display = "block";
+        
+        // Borrar el correo una vez suscrito
+        form.reset();
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
+      },
+      onError: function() {
+        document.getElementById("newsletter-loading").style.display = "none";
+        document.getElementById("newsletter-error").style.display = "block";
+      }
+    });
+
+    // Manejo visual del "Cargando" al enviar
+    document.getElementById("newsletter-form").addEventListener("submit", function() {
+      document.getElementById("newsletter-loading").style.display = "block";
+      document.getElementById("newsletter-error").style.display = "none";
+      document.getElementById("newsletter-success").style.display = "none";
+    });
+  </script>
 
 </body>
 
