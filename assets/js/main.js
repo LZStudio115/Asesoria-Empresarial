@@ -12,11 +12,22 @@
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (!selectHeader.classList.contains('scroll-up-sticky') && 
+        !selectHeader.classList.contains('sticky-top') && 
+        !selectHeader.classList.contains('fixed-top')) return;
+
+    const isScrolled = selectBody.classList.contains('scrolled');
+
+    if (!isScrolled && window.scrollY > 100) {
+      selectBody.classList.add('scrolled');
+    } else if (isScrolled && window.scrollY < 60) {
+      selectBody.classList.remove('scrolled');
+    }
+    // Si está entre 60 y 100, no hace nada → elimina el loop
   }
 
   document.addEventListener('scroll', toggleScrolled);
