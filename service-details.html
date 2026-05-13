@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Asesoria Empresarial</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Control de visibilidad de paneles de asesoría */
+    .service-panel {
+      display: none;
+    }
+    .service-panel.active {
+      display: block;
+    }
+
+    /* Imagen de placeholder cuando no hay foto */
+    .img-placeholder {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    /* Tags de subtemas */
+    .subtopics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+    .subtopic-tag {
+      background: #f0f4f8;
+      border: 1px solid #d0dae8;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1a3c5e;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: BizLand
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Updated: Dec 05 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+    
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <!--<i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i> -->
+        </div>
+        <div class="social-links d-flex justify-content-center justify-content-md-end align-items-center w-100">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/Logo_1.png" alt="">
+          <h1 class="sitename">ASESORÍA EMPRESARIAL</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="index.html#about">Acerca de Nosotros</a></li>
+            <li class="dropdown"><a href="index.html#services"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="service-details.html?servicio=admin">Administración</a></li>
+                <li><a href="service-details.html?servicio=marketing">Marketing</a></li>
+                <li><a href="service-details.html?servicio=rrhh">Recursos Humanos</a></li>
+                <li><a href="service-details.html?servicio=finanzas">Finanzas</a></li>
+                <li><a href="service-details.html?servicio=produccion">Producción</a></li>
+                <li><a href="service-details.html?servicio=logistica">Logística</a></li>
+                <li><a href="service-details.html?servicio=calidad">Calidad</a></li>
+              </ul>
+            </li>
+            <!--<li><a href="index.html#services">Servicios</a></li>-->
+            <li><a href="index.html#team">Equipo</a></li>     
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main class="main">
+ 
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Detalles del Servicio</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Detalles del Servicio</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container">
+        <div class="row gy-4">
+  
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="#" class="active" data-target="admin">
+                <i class="bi bi-building"></i> Asesoría en Administración
+              </a>
+              <a href="#" data-target="marketing">
+                <i class="bi bi-megaphone"></i> Asesoría en Marketing
+              </a>
+              <a href="#" data-target="rrhh">
+                <i class="bi bi-people"></i> Asesoría en Recursos Humanos
+              </a>
+              <a href="#" data-target="finanzas">
+                <i class="bi bi-cash-coin"></i> Asesoría en Finanzas
+              </a>
+              <a href="#" data-target="produccion">
+                <i class="bi bi-gear"></i> Asesoría en Producción
+              </a>
+              <a href="#" data-target="logistica">
+                <i class="bi bi-truck"></i> Asesoría en Logística
+              </a>
+              <a href="#" data-target="calidad">
+                <i class="bi bi-patch-check"></i> Asesoría en Gestión de Calidad
+              </a>
+            </div>
+  
+            <div class="sidebar-info">
+              <h4>¿Por qué elegirnos?</h4>
+              <p>Nuestro equipo formado por estudiantes de Administración de Empresas genero la idea de consultoría empresarial. Nuestras asesorías están diseñadas para impulsar el crecimiento y sostenible de tu empresa.</p>
+            </div>
+          </div>
+  
+          <!-- Content Area -->
+          <div class="col-lg-8">
+  
+            <!-- ADMINISTRACIÓN -->
+            <div class="service-panel active" id="panel-admin">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #1a3c5e, #2d6a9f);">
+                <i class="bi bi-building" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Administración Empresarial</h3>
+              <p>Optimizamos los procesos internos de tu empresa para que operes con mayor eficiencia, control y visión estratégica. Te acompañamos en la toma de decisiones clave que impulsan el crecimiento organizacional.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Planeación estratégica</span>
+                <span class="subtopic-tag">Estructura organizacional</span>
+                <span class="subtopic-tag">Gestión de procesos</span>
+                <span class="subtopic-tag">Control interno</span>
+                <span class="subtopic-tag">Gobierno corporativo</span>
+                <span class="subtopic-tag">Transformación digital</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Diseñamos estructuras organizacionales eficientes adaptadas al tamaño y visión de tu empresa.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Implementamos herramientas de control de gestión como KPIs y tableros de mando directivo.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Acompañamos procesos de cambio organizacional y mejora continua en todas las áreas.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Una empresa familiar con 20 empleados carecía de manuales de funciones y procesos claros. Diseñamos su organigrama, definimos roles y creamos un sistema de indicadores que redujo tiempos muertos en un 30%.</p>
+            </div>
+  
+            <!-- MARKETING -->
+            <div class="service-panel" id="panel-marketing">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #e34f74, #dd2251);">
+                <i class="bi bi-megaphone" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Marketing y Comunicación Comercial</h3>
+              <p>Desarrollamos estrategias de marketing que conectan tu marca con el cliente ideal. Desde la publicidad tradicional hasta el marketing digital, potenciamos la visibilidad y las ventas de tu negocio.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Publicidad digital</span>
+                <span class="subtopic-tag">Diseño de volantes y brochures</span>
+                <span class="subtopic-tag">Redes sociales</span>
+                <span class="subtopic-tag">Branding y marca</span>
+                <span class="subtopic-tag">Email marketing</span>
+                <span class="subtopic-tag">Investigación de mercados</span>
+                <span class="subtopic-tag">SEO / SEM</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Creamos campañas publicitarias en Meta Ads y Google Ads con segmentación precisa para tu público objetivo.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Diseñamos material impreso (volantes, brochures, banners) con identidad visual coherente y profesional.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Gestionamos redes sociales con contenido estratégico que genera comunidad y conversiones reales.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Un restaurante local invirtió en volantes sin resultados. Rediseñamos su material impreso, creamos una campaña en Instagram y en 2 meses aumentó su reserva de mesas en un 45%.</p>
+            </div>
+  
+            <!-- RECURSOS HUMANOS -->
+            <div class="service-panel" id="panel-rrhh">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #4a867e, #63a9a0);">
+                <i class="bi bi-people" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Recursos Humanos y Gestión del Talento</h3>
+              <p>El capital humano es el motor de toda organización. Te ayudamos a atraer, retener y desarrollar el talento adecuado, creando culturas de trabajo productivas, motivadoras y legalmente sólidas.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Selección de personal</span>
+                <span class="subtopic-tag">Contratos laborales</span>
+                <span class="subtopic-tag">Clima organizacional</span>
+                <span class="subtopic-tag">Nómina y liquidaciones</span>
+                <span class="subtopic-tag">Capacitación y formación</span>
+                <span class="subtopic-tag">Evaluación de desempeño</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Diseñamos procesos de reclutamiento y selección basados en perfiles de cargo bien definidos y pruebas técnicas.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Elaboramos contratos laborales y políticas internas conforme a la normatividad colombiana vigente.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Aplicamos encuestas de clima organizacional y planes de mejora para reducir la rotación del personal.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Una empresa de servicios tenía 60% de rotación anual. Diagnosticamos el problema, rediseñamos el proceso de inducción y creamos un plan de beneficios, logrando reducir la rotación al 20% en un año.</p>
+            </div>
+  
+            <!-- FINANZAS -->
+            <div class="service-panel" id="panel-finanzas">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #6c3483, #9b59b6);">
+                <i class="bi bi-cash-coin" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Finanzas y Contabilidad Empresarial</h3>
+              <p>Tomamos el control financiero de tu empresa para que cada peso cuente. Analizamos tu situación actual, proyectamos escenarios futuros y diseñamos estrategias que garantizan la sostenibilidad del negocio.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Flujo de caja</span>
+                <span class="subtopic-tag">Presupuestos anuales</span>
+                <span class="subtopic-tag">Análisis de costos</span>
+                <span class="subtopic-tag">Créditos y financiación</span>
+                <span class="subtopic-tag">Declaración de impuestos</span>
+                <span class="subtopic-tag">Estados financieros</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Elaboramos presupuestos anuales y flujos de caja proyectados que te permiten anticipar necesidades de capital.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Analizamos la estructura de costos para identificar fugas de dinero y mejorar el margen de rentabilidad.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Asesoramos en la gestión tributaria, cumplimiento de obligaciones fiscales y optimización legal de impuestos.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Un comercio minorista no tenía claridad sobre su rentabilidad real. Tras un análisis de costos, descubrimos que 3 productos generaban pérdidas. Al reajustar precios, la utilidad neta subió un 22%.</p>
+            </div>
+  
+            <!-- PRODUCCIÓN -->
+            <div class="service-panel" id="panel-produccion">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #2c3e50, #7f8c8d);">
+                <i class="bi bi-gear" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Producción y Operaciones</h3>
+              <p>Maximizamos la eficiencia de tus procesos productivos reduciendo desperdicios, tiempos muertos y costos operativos. Aplicamos metodologías de clase mundial adaptadas a la realidad de tu empresa.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Lean Manufacturing</span>
+                <span class="subtopic-tag">Capacidad de planta</span>
+                <span class="subtopic-tag">Control de inventarios</span>
+                <span class="subtopic-tag">Mantenimiento preventivo</span>
+                <span class="subtopic-tag">Tiempos y movimientos</span>
+                <span class="subtopic-tag">Layout de planta</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Aplicamos herramientas Lean (5S, Kaizen, Kanban) para eliminar desperdicios y mejorar la productividad de línea.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Realizamos estudios de tiempos y movimientos para establecer estándares de producción medibles y alcanzables.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Rediseñamos el layout de planta para optimizar el flujo de materiales y reducir tiempos de desplazamiento.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Una planta de confección tenía cuellos de botella en el área de corte. Aplicamos 5S y redistribuimos las estaciones de trabajo, logrando un aumento del 35% en unidades producidas por turno.</p>
+            </div>
+  
+            <!-- LOGÍSTICA -->
+            <div class="service-panel" id="panel-logistica">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #d35400, #e67e22);">
+                <i class="bi bi-truck" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Logística y Cadena de Suministro</h3>
+              <p>Diseñamos cadenas de suministro ágiles y eficientes que garantizan que el producto correcto llegue al lugar correcto, en el momento justo y al menor costo posible.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">Gestión de proveedores</span>
+                <span class="subtopic-tag">Distribución y rutas</span>
+                <span class="subtopic-tag">Almacenamiento</span>
+                <span class="subtopic-tag">Inventario y stock</span>
+                <span class="subtopic-tag">Importaciones</span>
+                <span class="subtopic-tag">Last mile delivery</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Evaluamos y seleccionamos proveedores estratégicos con criterios de calidad, precio y confiabilidad de entrega.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Diseñamos rutas de distribución optimizadas que reducen costos de transporte hasta en un 25%.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Implementamos sistemas de gestión de inventario para evitar quiebres de stock y exceso de mercancía.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Una distribuidora de alimentos tenía altos costos de transporte y entregas tardías. Rediseñamos sus rutas y establecimos acuerdos con proveedores clave, reduciendo costos logísticos en un 28% en 6 meses.</p>
+            </div>
+  
+            <!-- GESTIÓN DE CALIDAD -->
+            <div class="service-panel" id="panel-calidad">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #1a5276, #2980b9);">
+                <i class="bi bi-patch-check" style="font-size:5rem;opacity:0.5;"></i>
+              </div>
+              <h3>Asesoría en Gestión de Calidad y Certificaciones</h3>
+              <p>Implementamos sistemas de gestión de calidad que elevan tus estándares operativos, aumentan la satisfacción del cliente y preparan a tu empresa para obtener certificaciones internacionales reconocidas.</p>
+              <div class="subtopics">
+                <span class="subtopic-tag">ISO 9001</span>
+                <span class="subtopic-tag">Normas técnicas colombianas</span>
+                <span class="subtopic-tag">Auditorías internas</span>
+                <span class="subtopic-tag">Gestión de no conformidades</span>
+                <span class="subtopic-tag">Satisfacción del cliente</span>
+                <span class="subtopic-tag">Mejora continua</span>
+              </div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Guiamos a tu empresa paso a paso en la implementación y certificación bajo la norma ISO 9001:2015.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Diseñamos procedimientos documentados, políticas de calidad y formatos de control para todos los procesos clave.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Realizamos auditorías internas periódicas para identificar oportunidades de mejora antes de las auditorías externas.</span></li>
+              </ul>
+              <p><strong>Ejemplo práctico:</strong> Una empresa manufacturera quería licitar con el Estado pero no cumplía requisitos de calidad. En 8 meses la preparamos y acompañamos hasta obtener la certificación ISO 9001, abriendo nuevas oportunidades de negocio.</p>
+            </div>
+  
+          </div><!-- /col-lg-8 -->
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <script>
+    const links = document.querySelectorAll('.services-list a');
+    const panels = document.querySelectorAll('.service-panel');
+
+    function activarServicio(target) {
+      // Si el target no existe, usar 'admin' por defecto
+      const panel = document.getElementById('panel-' + target);
+      if (!panel) return;
+
+      links.forEach(l => l.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      panel.classList.add('active');
+
+      // Marcar el enlace del sidebar como activo
+      const linkActivo = document.querySelector(`.services-list a[data-target="${target}"]`);
+      if (linkActivo) linkActivo.classList.add('active');
+    }
+
+    // Leer parámetro de la URL al cargar la página
+    const params = new URLSearchParams(window.location.search);
+    const servicioURL = params.get('servicio');
+    activarServicio(servicioURL || 'admin');
+
+    // Clicks en el sidebar
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        activarServicio(this.dataset.target);
+
+        if (window.innerWidth < 992) {
+          document.getElementById('panel-' + this.dataset.target)
+            .scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Suscríbete a nuestro boletín informativo</h4>
+            <p>¡Suscríbete a nuestro boletín y recibe las últimas noticias sobre nuestros productos y servicios!</p>
+            
+            <div id="newsletter-success" style="display:none;" class="sent-message">Su solicitud de suscripción ha sido enviada. ¡Gracias!</div>
+            <div id="newsletter-error" style="display:none;" class="error-message">Hubo un error al procesar su suscripción.</div>
+
+            <form id="newsletter-form" class="php-email-form">
+              <input type="hidden" name="subject" value="Suscripción Boletín">
+              
+              <div class="newsletter-form">
+                <input type="email" name="email" required data-fs-field>
+                <input type="submit" value="Suscribirse" data-fs-submit-btn>
+              </div>
+              
+              <div class="loading" id="newsletter-loading" style="display:none;">Cargando...</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Asesoría Empresarial</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Vía Universidad Francisco de Paula Santander,</p>
+            <p> Ocaña, Norte de Santander</p>
+            <p class="mt-3"><strong>Teléfono:</strong> <span>3022700376</span></p>
+            <p><strong>Correo Electrónico:</strong> <span>asesoriaempresarial2026@outlook.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Enlaces útiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html">Inicio</a></li> 
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">Acerca de Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#team">Equipo de Trabajo</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>    
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nuestros Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=admin">Administración</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=marketing">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=rrhh">Recursos Humanos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=finanzas">Finanzas</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=produccion">Producción</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=logistica">Logística</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?servicio=calidad">Gestión de Calidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Buscanos en cualquiera de nuestras redes sociales</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Asesoría Empresarial</strong> <span>Derechos Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Adapted by <a href="https://github.com/LZStudio115/">LZStudios115</a> | <a href="https://bootstrapmade.com/tools/">Bootstrapmade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short scroll-icon"></i>
+      <img src="assets/img/iconwsp.png" alt="WhatsApp" class="whatsapp-icon" style="display: none; width: 30px; height: 30px;">
+    </a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+  <script>
+    window.formspree = window.formspree || function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+
+    formspree("initForm", {
+      formElement: "#my-form",
+      formId: "xqewnlwd",
+      // Esta función se ejecuta cuando el envío es exitoso
+      onSuccess: function() {
+        const form = document.getElementById("my-form");
+        const successMsg = document.getElementById("form-success");
+        
+        // 1. Mostrar mensaje de éxito
+        successMsg.style.display = "block";
+        
+        // 2. Borrar los inputs
+        form.reset();
+        
+        // Opcional: Ocultar el mensaje después de 5 segundos
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
+      },
+      onError: function() {
+        document.getElementById("form-error").style.display = "block";
+      }
+    });
+  </script>
+  <script>
+    // Inicialización del formulario de suscripción
+    formspree("initForm", {
+      formElement: "#newsletter-form",
+      formId: "xqewnlwd", // El mismo ID que usas para el contacto
+      onSuccess: function() {
+        const form = document.getElementById("newsletter-form");
+        const successMsg = document.getElementById("newsletter-success");
+        const loadingMsg = document.getElementById("newsletter-loading");
+
+        loadingMsg.style.display = "none";
+        successMsg.style.display = "block";
+        
+        // Borrar el correo una vez suscrito
+        form.reset();
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
+      },
+      onError: function() {
+        document.getElementById("newsletter-loading").style.display = "none";
+        document.getElementById("newsletter-error").style.display = "block";
+      }
+    });
+
+    // Manejo visual del "Cargando" al enviar
+    document.getElementById("newsletter-form").addEventListener("submit", function() {
+      document.getElementById("newsletter-loading").style.display = "block";
+      document.getElementById("newsletter-error").style.display = "none";
+      document.getElementById("newsletter-success").style.display = "none";
+    });
+  </script>
+
+</body>
+
+</html>
